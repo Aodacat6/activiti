@@ -1,0 +1,15 @@
+
+server:
+  port: 8080
+spring:
+  application:
+    name: activiti-start
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.15.207.98:3306/alltest?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: Acdmdb20!
+
+  jpa:
+    show-sql: true
