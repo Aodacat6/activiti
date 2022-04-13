@@ -56,13 +56,46 @@ class ActivitiStudyApplicationTests {
 	@Test
 	public void apply() {
 		//申请
-		String assignee = "小明11";
+		String assignee = "小明";
 		final Task task = taskService.createTaskQuery().taskAssignee(assignee).singleResult();
 
 		if (task == null) {
 			throw new RuntimeException(assignee + "没有代办任务");
 		}
+		System.out.println("获取到任务id：" + task.getId());
+		System.out.println("获取到任务负责人：" + task.getAssignee());
 
+		/**
+		 * 传入临时变量,4天假，看怎么走分支
+		 */
+		Map<String, Object> var = new HashMap<>();
+		var.put("day", 1);
+
+		taskService.complete(task.getId(), var);
+
+
+	}
+
+	/**
+	 * 完成任务
+	 */
+	@Test
+	public void complete() {
+		//申请
+		String assignee = "王经理";
+		//String assignee = "张总";
+		//String assignee = "李财务";
+
+		final Task task = taskService.createTaskQuery().taskAssignee(assignee).singleResult();
+
+		if (task == null) {
+			throw new RuntimeException(assignee + "没有代办任务");
+		}
+		System.out.println("获取到任务id：" + task.getId());
+		System.out.println("获取到任务负责人：" + task.getAssignee());
+
+		//完成任务
+		taskService.complete(task.getId());
 
 	}
 

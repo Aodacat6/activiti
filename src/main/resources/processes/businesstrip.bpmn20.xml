@@ -59,6 +59,8 @@
       <bpmndi:BPMNEdge id="edge-f97df4c2-31b6-4c0a-a879-179a72ca7315" bpmnElement="sid-deecbbae-921d-4aaf-bdd4-858f7be51149">
         <omgdi:waypoint x="5.0" y="25.0"/>
         <omgdi:waypoint x="5.0" y="-5.0"/>
+        <omgdi:waypoint x="25.0" y="-5.0"/>
+        <omgdi:waypoint x="40.0" y="-5.0"/>
         <omgdi:waypoint x="75.0" y="-5.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge-17902c60-4183-41b7-861b-3cc9a787075c" bpmnElement="sid-61410f97-d97c-445f-af96-61b4c1099ba1">
